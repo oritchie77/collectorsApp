@@ -28,6 +28,12 @@ $allGames = $query->fetchAll();
         <h2>Your Collection</h2>
         <div class="gameCardsContainer">
             <?= $gameCards ?>
+            <div class="gameCard">
+                <form>
+
+                </form>
+
+            </div>
         </div>
     </main>
 
