@@ -1,7 +1,7 @@
 <?php
 require_once './functions.php';
 
-$db = new PDO('mysql:host=127.0.0.1: 3306; dbname=colletor', 'root', 'password');
+$db = new PDO('mysql:host=db; dbname=colletor', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query = $db->prepare('SELECT * FROM `games`');
 $query->execute();
