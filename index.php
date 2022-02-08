@@ -7,6 +7,7 @@ $allGames = $query->fetchAll();
 
 require_once './functions.php';
  $gameCard = displayGameCard($allGames);
+ print_r($allGames[0]);
 ?>
 
 <html lang="en-GB">
