@@ -15,13 +15,18 @@ $allGames = $query->fetchAll();
 
 <head>
     <title>Collector App</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
+    <nav>
+        <h1>Meeple for the People</h1>
+    </nav>
     <main>
-      <h1>Board Games</h1>
+
         <h2>Your Collection</h2>
-        <div class="GameCardsContainer">
+        <div class="gameCardsContainer">
             <?= $gameCards ?>
         </div>
     </main>
