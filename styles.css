@@ -7,7 +7,7 @@ body {
     background-image: url("game-340574_1280.jpg");
 }
 
-nav {
+header {
     background-color: #195438;
     padding: 0 20px;
     display: flex;
@@ -16,7 +16,7 @@ nav {
     color: #babfbc;
 }
 
-main{
+main {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -27,7 +27,7 @@ main{
 }
 
 .gameCardsContainer {
-    width: 90%;
+    margin: 0 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;

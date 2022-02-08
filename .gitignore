@@ -11,3 +11,4 @@ modules.xml
 vcs.xml
 collectorsApp.iml
 .gitignore
+.DS_Store
