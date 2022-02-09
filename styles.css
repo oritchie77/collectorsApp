@@ -16,7 +16,7 @@ header {
     color: #babfbc;
 }
 
-main {
+.gameCollection {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -45,4 +45,35 @@ main {
     justify-content: center;
     align-items: center;
     color: #babfbc;
+}
+
+.formContainer {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hexBorder {
+    position: relative;
+    background: #fff;
+    height: 300px;
+    width: 350px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding: 5px;
+
+}
+
+.hexBody {
+    position: relative;
+    background: deeppink;
+    height: 300px;
+    width: 350px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
