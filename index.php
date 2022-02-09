@@ -39,21 +39,21 @@ $allGames = $query->fetchAll();
     <div class="navHexContainer">
         <div class="navHexRow first">
             <div class="navHex">
-                <img src="home.png">
+                <img src="home.png" alt="home icon">
             </div>
             <div class="navHex">
-                <img src="folder.png">
+                <img src="folder.png" alt="folder icon">
             </div>
             <div class="navHex">
-                <img src="user.png">
+                <img src="user.png" alt="user icon">
             </div>
         </div>
         <div class="navHexRow last">
             <div class="navHex">
-                <img src="freinds.png">
+                <img src="friends.png" alt="group icon">
             </div>
             <div class="navHex">
-                <img src="home.png">
+                <img src="shop.png" alt="online shop icon">
             </div>
         </div>
     </div>
