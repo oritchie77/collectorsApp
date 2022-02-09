@@ -1,20 +1,55 @@
-
-html {
-    font-size: 10px;
-    font-family: Helvetica, sans-serif;
+:root {
+    --my-cream: #fae6b1;
+    --my-orange: #ffa101;
+    --my-light-blue: #b3dee5;
+    --my-dark-blue: #31525b;
 }
 
 body {
     background-image: url("game-340574_1280.jpg");
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
 }
 
 header {
-    background-color: #195438;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
-    color: #babfbc;
+    height: 100px;
+}
+
+nav {
+    background-color: var(--my-dark-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    clip-path: inset(0 0 23% 0);
+}
+
+.logoBorder {
+    position: relative;
+    display: flex;
+    background-color: var(--my-orange);
+    width: 200px;
+    height: 175px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding: 5px;
+    bottom: 85%;
+    transform: rotate(-90deg);
+}
+
+.logoHex {
+    display: flex;
+    background-color: var(--my-cream);
+    width: 200px;
+    height: 175px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoHex h1 {
+    transform: rotate(90deg);
 }
 
 .gameCollection {
@@ -22,7 +57,6 @@ header {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border: #babfbc solid 2px;
     margin: 30px;
     border-radius: 20px;
 }
@@ -36,16 +70,24 @@ header {
     padding-bottom: 30px;
 }
 
-.gameCard {
-    width: 200px;
+.gameCardBorder {
+    width: 225px;
     height: 200px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: #195438;
+    background-color: var(--my-orange);
+    padding: 5px;
+}
+
+.gameCard {
+    width: 225px;
+    height: 200px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: var(--my-dark-blue);
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    color: #babfbc;
+    color: #fff;
 }
 
 .formContainer {
@@ -53,7 +95,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .hexBorder {
@@ -63,7 +104,6 @@ header {
     width: 350px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     padding: 5px;
-
 }
 
 .hexBody {
@@ -77,4 +117,46 @@ header {
     align-content: center;
     justify-content: space-around;
     align-items: center;
+}
+
+.navHexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+}
+
+.navHexRow {
+    display: flex;
+    gap: 30px;
+    height: 40px;
+ }
+
+.navHex {
+    display: flex;
+    height: 40px;
+    width: 45px;
+    background-color: var(--my-orange);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.navHex img {
+    height: 25px;
+}
+
+.last .navHex{
+    position: relative;
+    bottom: 50%;
+}
+
+.addGameToCollection {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
 }
