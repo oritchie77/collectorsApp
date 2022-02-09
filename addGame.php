@@ -14,7 +14,14 @@
 
 
         <nav>
+            <div class="navHexContainer">
+                <div class="navHexRow first">
+                    <div class="navHex">
 
+                    </div>
+                </div>
+
+            </div>
         </nav>
         <main>
         <section class="formContainer">
