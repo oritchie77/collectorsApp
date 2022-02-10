@@ -5,14 +5,46 @@ $db = new PDO('mysql:host=db; dbname=gamecollectorapp', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 if(isset($_POST['name'])) {
+    if(empty($_POST['name'])) {
+        echo 'A string is required';
+    } else {
+        $name = $_POST['name'];
+    }
+    if(empty($_POST['play_time_in_mins'])) {
+        echo 'A Number is required';
+    } else {
+        $playTime = $_POST['play_time_in_mins'];
+        if (preg_match('/[^0-9\s]+$/', $playTime)) {
+            echo 'Must be a number';
+        }
+    }
+    if(empty($_POST['expansions_available'])) {
+        echo 'A Number is required';
+    } else {
+        $expansion = $_POST['expansions_available'];
+        if (preg_match('/[^0-9\s]+$/', $expansion)) {
+            echo 'Must be a number';
+        }
+    }
+    if(empty($_POST['max_number_of_players'])) {
+        echo 'A Number is required';
+    } else {
+        $maxPlayers = $_POST['max_number_of_players'];
+        if (preg_match('/[^0-9\s]+$/', $maxPlayers)) {
+            echo 'Must be a number';
+        }
+    }
+    if(empty($_POST['min_number_of_players'])) {
+        echo 'A Number is required';
+    } else {
+        $minPlayers = $_POST['min_number_of_players'];
+        if (preg_match('/[^0-9\s]+$/', $minPlayers)) {
+            echo 'Must be a number';
+        }
+    }
     $otherQuery = $db->prepare(
         'INSERT INTO `games` (`name`, `play_time_in_mins`, `expansions_available`, `max_number_of_players`, `min_number_of_players`) VALUES (:name, :playTime, :expansion, :maxPlayers, :minPlayers);');
 
-    $name = $_POST['name'];
-    $playTime = $_POST['play_time_in_mins'];
-    $expansion = $_POST['expansions_available'];
-    $maxPlayers = $_POST['max_number_of_players'];
-    $minPlayers = $_POST['min_number_of_players'];
 
     $otherQuery->execute([':name' => $name, ':playTime' => $playTime, ':expansion' => $expansion, ':maxPlayers' => $maxPlayers, ':minPlayers' => $minPlayers]);
 }
@@ -23,6 +55,7 @@ $allGames = $query->fetchAll();
 
 
     $gameCards = displayAllGameCards($allGames);
+
 
 ?>
 

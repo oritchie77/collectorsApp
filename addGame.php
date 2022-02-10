@@ -1,5 +1,13 @@
 <?php
 require_once './functions.php';
+
+if(isset($_POST['submit'])){
+    if(empty($_POST['name'])) {
+        echo 'A string is required';
+    } else {
+        echo htmlspecialchars($_POST['name']);
+    }
+}
 ?>
 
 <html lang="en-GB">
@@ -54,19 +62,19 @@ require_once './functions.php';
                                  <h3>Add a Game</h3>
                              </div>
                             <div>
-                                <label for="name">Game name:</label><input type="text" id="name" name="name">
+                                <label for="name">Game name:</label><input type="text" id="name" name="name" required>
                             </div>
                             <div>
-                                <label for="playTime">Play time: </label><input type="number" id="playTime" name="play_time_in_mins" placeholder="in mins?">
+                                <label for="playTime">Play time: </label><input type="number" id="playTime" name="play_time_in_mins" placeholder="in mins?" required>
                             </div>
                             <div>
-                                <label for="minPlayers">Min number of Players:</label><input type="Number" id="minPlayers" name="min_number_of_players" placeholder="0">
+                                <label for="minPlayers">Min number of Players:</label><input type="Number" id="minPlayers" name="min_number_of_players" placeholder="0" required>
                             </div>
                              <div>
-                                 <label for="maxPlayers"></label>Max number of Players<input type="Number" id="maxPlayers" name="max_number_of_players" placeholder="0">
+                                 <label for="maxPlayers"></label>Max number of Players<input type="Number" id="maxPlayers" name="max_number_of_players" placeholder="0" required>
                              </div>
                              <div>
-                                 <label for="expansions"></label>Number of Expansions: <input type="Number" id="expansions" name="expansions_available" placeholder="0">
+                                 <label for="expansions"></label>Number of Expansions: <input type="Number" id="expansions" name="expansions_available" placeholder="0" required>
                              </div>
                              <div>
                                  <input type="submit" value="Add to Collection!">
