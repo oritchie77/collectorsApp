@@ -73,6 +73,10 @@ require_once './functions.php';
                     </form>
                 </div>
             </div>
+            <div class="hexBorder cardTwo" >
+                <div class="hexBody CardTwo">
+                </div>
+            </div>
         </section>
     </main>
 </body>
