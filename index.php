@@ -97,7 +97,7 @@ $allGames = $query->fetchAll();
     <header>
         <div class="logoBorder">
             <div class="logoHex">
-                <h1>Meeple for the People</h1>
+                <h1>Meeple for the People!</h1>
             </div>
         </div>
     </header>
