@@ -209,3 +209,16 @@ main h2 {
     transform: scale(1.5);
     z-index: 1;
 }
+
+@media screen and (max-width: 850px){
+    .logoBorder {
+        bottom: 0;
+    }
+    header {
+        height: 200px;
+    }
+
+    .hexBorder {
+        transform: scale(0.7);
+    }
+}
