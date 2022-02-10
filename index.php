@@ -54,6 +54,11 @@ $allGames = $query->fetchAll();
                 </a>
             </div>
         </div>
+        <div class="logoBorder">
+            <div class="logoHex">
+                <h1>Meeple for the People</h1>
+            </div>
+        </div>
         <a class="addGameToCollection" href="addGame.php">
             <p>Add a Game to your Collection:</p>
             <div class="navHex">
@@ -62,11 +67,7 @@ $allGames = $query->fetchAll();
         </a>
     </nav>
     <header>
-        <div class="logoBorder">
-            <div class="logoHex">
-                <h1>Meeple for the People</h1>
-            </div>
-        </div>
+
     </header>
     <main>
         <section class="gameCollection">
