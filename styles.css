@@ -25,6 +25,18 @@ nav {
     clip-path: inset(0 0 23% 0);
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+p {
+
+}
+
 .logoBorder {
     position: relative;
     display: flex;
@@ -52,6 +64,10 @@ nav {
     transform: rotate(90deg);
 }
 
+main h2 {
+    color: #fff;
+}
+
 .gameCollection {
     display: flex;
     flex-flow: column;
@@ -66,7 +82,7 @@ nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 30px;
+    gap: 10px;
     padding-bottom: 30px;
 }
 
@@ -97,20 +113,33 @@ nav {
     align-items: center;
 }
 
+.addGameForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.addGameForm h3 {
+    font-size: 1rem;
+}
 .hexBorder {
     position: relative;
-    background: #fff;
-    height: 300px;
-    width: 350px;
+    background: var(--my-orange);
+    height: 450px;
+    width: 500px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     padding: 5px;
 }
 
 .hexBody {
     position: relative;
-    background: deeppink;
-    height: 300px;
-    width: 350px;
+    background: var(--my-dark-blue);
+    height: 450px;
+    width: 500px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     flex-direction: column;
@@ -158,5 +187,5 @@ nav {
     color: #fff;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }

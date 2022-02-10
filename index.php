@@ -35,35 +35,35 @@ $allGames = $query->fetchAll();
 </head>
 
 <body>
-<nav>
-    <div class="navHexContainer">
-        <div class="navHexRow first">
-            <div class="navHex">
-                <img src="home.png" alt="home icon">
+    <nav>
+        <div class="navHexContainer">
+            <div class="navHexRow first">
+                <a class="navHex" href="index.php">
+                    <img src="home.png" alt="home icon">
+                </a>
+                <a class="navHex" href="index.php">
+                    <img src="folder.png" alt="folder icon">
+                </a>
+                <a class="navHex" href="#">
+                    <img src="user.png" alt="user icon">
+                </a>
             </div>
-            <div class="navHex">
-                <img src="folder.png" alt="folder icon">
-            </div>
-            <div class="navHex">
-                <img src="user.png" alt="user icon">
+            <div class="navHexRow last">
+                <a class="navHex" href="#">
+                    <img src="friends.png" alt="group icon">
+                </a>
+                <a class="navHex" href="https://www.amazon.co.uk/s?k=board+games&sprefix=boar%2Caps%2C64&ref=nb_sb_ss_ts-doa-p_1_4" target="_blank">
+                    <img src="shop.png" alt="online shop icon">
+                </a>
             </div>
         </div>
-        <div class="navHexRow last">
+        <a class="addGameToCollection" href="addGame.php">
+            <p>Add a Game to your Collection:</p>
             <div class="navHex">
-                <img src="friends.png" alt="group icon">
+                <img src="addTo.png" alt="go to icon">
             </div>
-            <div class="navHex">
-                <img src="shop.png" alt="online shop icon">
-            </div>
-        </div>
-    </div>
-    <div class="addGameToCollection">
-        <p>Add a Game to your Collection:</p>
-        <div class="navHex">
-            <a href="addGame.php"><img src="addTo.png"></a>
-        </div>
-    </div>
-</nav>
+        </a>
+    </nav>
     <header>
         <div class="logoBorder">
             <div class="logoHex">
@@ -76,10 +76,6 @@ $allGames = $query->fetchAll();
              <h2>Your Collection</h2>
              <div class="gameCardsContainer">
                    <?= $gameCards ?>
-                  <div class="gameCard newGame">
-                        <a href="addGame.php"><h3>Add a new Game!!!</h3></a>
-
-                  </div>
              </div>
         </section>
     </main>
