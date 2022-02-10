@@ -35,33 +35,33 @@ $allGames = $query->fetchAll();
 </head>
 
 <body>
-<nav>
-    <div class="navHexContainer">
-        <div class="navHexRow first">
-            <a class="navHex" href="index.php">
-                <img src="home.png" alt="home icon">
-                <p>home</p>
-            </a>
-            <a class="navHex" href="index.php">
-                <img src="folder.png" alt="folder icon">
-                <p>games</p>
-            </a>
-        </div>
-        <div class="navHexRow last">
+    <nav>
+        <div class="navHexContainer">
+            <div class="navHexRow first">
+                <a class="navHex" href="index.php">
+                    <img src="home.png" alt="home icon">
+                    <p>home</p>
+                </a>
+                <a class="navHex" href="index.php">
+                    <img src="folder.png" alt="folder icon">
+                    <p>games</p>
+                </a>
+            </div>
+            <div class="navHexRow last">
 
-            <a class="navHex" href="https://www.amazon.co.uk/s?k=board+games&sprefix=boar%2Caps%2C64&ref=nb_sb_ss_ts-doa-p_1_4" target="_blank">
-                <img src="shop.png" alt="online shop icon">
-                <p>shop</p>
-            </a>
+                <a class="navHex" href="https://www.amazon.co.uk/s?k=board+games&sprefix=boar%2Caps%2C64&ref=nb_sb_ss_ts-doa-p_1_4" target="_blank">
+                    <img src="shop.png" alt="online shop icon">
+                    <p>shop</p>
+                </a>
+            </div>
         </div>
-    </div>
-    <a class="addGameToCollection" href="addGame.php">
-        <p>Add a Game to your Collection:</p>
-        <div class="navHex">
-            <img src="addTo.png" alt="go to icon">
-        </div>
-    </a>
-</nav>
+        <a class="addGameToCollection" href="addGame.php">
+            <p>Add a Game to your Collection:</p>
+            <div class="navHex">
+                <img src="addTo.png" alt="go to icon">
+            </div>
+        </a>
+    </nav>
     <header>
         <div class="logoBorder">
             <div class="logoHex">
