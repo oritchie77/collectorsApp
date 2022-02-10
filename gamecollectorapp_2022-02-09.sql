@@ -6,8 +6,8 @@
 # https://github.com/Sequel-Ace/Sequel-Ace
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.6.5-MariaDB-1:10.6.5+maria~focal)
-# Database: colletor
-# Generation Time: 2022-02-07 15:14:39 +0000
+# Database: gamecollectorapp
+# Generation Time: 2022-02-09 10:12:17 +0000
 # ************************************************************
 
 
@@ -29,7 +29,7 @@ CREATE TABLE `games` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `play_time_in_mins` int(11) DEFAULT NULL,
-  `expansions_available` bit(1) DEFAULT NULL,
+  `expansions_available` int(11) DEFAULT NULL,
   `max_number_of_players` int(11) DEFAULT NULL,
   `min_number_of_players` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -40,10 +40,13 @@ LOCK TABLES `games` WRITE;
 
 INSERT INTO `games` (`id`, `name`, `play_time_in_mins`, `expansions_available`, `max_number_of_players`, `min_number_of_players`)
 VALUES
-	(1,'Catan',120,b'1',3,4),
-	(2,'Ticket to Ride Europe',60,b'1',2,5),
-	(3,'Exploding Kittens',20,b'1',2,5),
-	(4,'Othelo',30,b'0',2,2);
+	(1,'Catan',120,1,3,4),
+	(2,'Ticket to Ride Europe',60,1,2,5),
+	(3,'Exploding Kittens',20,1,2,5),
+	(4,'Othelo',30,0,2,2),
+	(24,'Bang',20,0,8,3),
+	(25,'cards agansit humanity ',20,5,2,5),
+	(26,'pandemic',120,0,5,2);
 
 /*!40000 ALTER TABLE `games` ENABLE KEYS */;
 UNLOCK TABLES;

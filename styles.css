@@ -1,27 +1,77 @@
-html {
-    font-size: 10px;
-    font-family: Helvetica, sans-serif;
+:root {
+    --my-cream: #fae6b1;
+    --my-orange: #ffa101;
+    --my-light-blue: #b3dee5;
+    --my-dark-blue: #31525b;
 }
 
 body {
     background-image: url("game-340574_1280.jpg");
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
 }
 
 header {
-    background-color: #195438;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
-    color: #babfbc;
+    height: 100px;
 }
 
-main {
+nav {
+    background-color: var(--my-dark-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+p {
+
+}
+
+.logoBorder {
+    position: relative;
+    display: flex;
+    background-color: var(--my-orange);
+    width: 200px;
+    height: 175px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding: 5px;
+    bottom: 85%;
+    transform: rotate(-90deg);
+}
+
+.logoHex {
+    display: flex;
+    background-color: var(--my-cream);
+    width: 200px;
+    height: 175px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoHex h1 {
+    transform: rotate(90deg);
+}
+
+main h2 {
+    color: #ffffff;
+}
+
+.gameCollection {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border: #babfbc solid 2px;
     margin: 30px;
     border-radius: 20px;
 }
@@ -31,18 +81,144 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 30px;
+    gap: 10px;
     padding-bottom: 30px;
 }
 
-.gameCard {
-    width: 200px;
+.gameCardBorder {
+    width: 225px;
     height: 200px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: #195438;
+    background-color: var(--my-orange);
+    padding: 5px;
+}
+
+.gameCard {
+    width: 225px;
+    height: 200px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: var(--my-dark-blue);
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    color: #babfbc;
+    color: #ffffff;
+}
+
+.gameCollection .gameCardsContainer .gameCardBorder:hover {
+    background-color: var(--my-light-blue);
+    transform: scale(1.8);
+    z-index: 1;
+}
+
+.formContainer {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addGameForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.addGameForm h3 {
+    font-size: 1rem;
+}
+.hexBorder {
+    position: relative;
+    background: var(--my-orange);
+    height: 450px;
+    width: 500px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding: 5px;
+}
+
+.hexBody {
+    position: relative;
+    background: var(--my-dark-blue);
+    height: 450px;
+    width: 500px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navHexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+}
+
+.navHexRow {
+    display: flex;
+    gap: 30px;
+    height: 40px;
+ }
+
+.navHex {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 45px;
+    background-color: var(--my-orange);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.navHex p{
+    margin: 0;
+}
+.navHex img {
+    height: 25px;
+}
+
+.last .navHex{
+    position: relative;
+    bottom: 25%;
+}
+
+.first .navHex {
+    position: relative;
+    top: 25%
+}
+
+.addGameToCollection {
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.navHexContainer .navHexRow .navHex:hover{
+    background-color: var(--my-light-blue);
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+@media screen and (max-width: 850px){
+    .logoBorder {
+        bottom: 0;
+    }
+    header {
+        height: 200px;
+    }
+
+    .hexBorder {
+        transform: scale(0.7);
+    }
 }
