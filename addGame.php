@@ -20,14 +20,9 @@ require_once './functions.php';
              <a class="navHex" href="index.php">
                 <img src="folder.png" alt="folder icon">
              </a>
-             <a class="navHex" href="#">
-                <img src="user.png" alt="user icon">
-             </a>
           </div>
             <div class="navHexRow last">
-                <a class="navHex" href="#">
-                 <img src="friends.png" alt="group icon">
-              </a>
+
                 <a class="navHex" href="https://www.amazon.co.uk/s?k=board+games&sprefix=boar%2Caps%2C64&ref=nb_sb_ss_ts-doa-p_1_4" target="_blank">
                     <img src="shop.png" alt="online shop icon">
                 </a>
