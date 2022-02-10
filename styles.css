@@ -22,7 +22,6 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 5px 30px;
-    clip-path: inset(0 0 23% 0);
 }
 
 h2 {
@@ -106,6 +105,12 @@ main h2 {
     color: #ffffff;
 }
 
+.gameCollection .gameCardsContainer .gameCardBorder:hover {
+    background-color: var(--my-light-blue);
+    transform: scale(1.8);
+    z-index: 1;
+}
+
 .formContainer {
     height: 500px;
     display: flex;
@@ -164,6 +169,7 @@ main h2 {
 
 .navHex {
     display: flex;
+    flex-direction: column;
     height: 40px;
     width: 45px;
     background-color: var(--my-orange);
@@ -172,13 +178,21 @@ main h2 {
     align-items: center;
 }
 
+.navHex p{
+    margin: 0;
+}
 .navHex img {
     height: 25px;
 }
 
 .last .navHex{
     position: relative;
-    bottom: 50%;
+    bottom: 25%;
+}
+
+.first .navHex {
+    position: relative;
+    top: 25%
 }
 
 .addGameToCollection {
@@ -188,4 +202,10 @@ main h2 {
     align-items: center;
     gap: 10px;
     font-size: 1rem;
+}
+
+.navHexContainer .navHexRow .navHex:hover{
+    background-color: var(--my-light-blue);
+    transform: scale(1.5);
+    z-index: 1;
 }
