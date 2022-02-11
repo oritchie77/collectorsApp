@@ -6,40 +6,40 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 if(isset($_POST['name'])) {
     if(empty($_POST['name'])) {
-        echo 'A string is required';
+        echo '<h2>Form not Submitted!!! Game name is required</h2><br>';
     } else {
         $name = $_POST['name'];
     }
     if(empty($_POST['play_time_in_mins'])) {
-        echo 'A Number is required';
+        echo '<h2>Form not Submitted!!! Play time  is required</h2><br>';
     } else {
         $playTime = $_POST['play_time_in_mins'];
         if (preg_match('/[^0-9\s]+$/', $playTime)) {
-            echo 'Must be a number';
+            echo '<h2>Form not Submitted!!! Play Time must be a number</h2><br>';
         }
     }
     if(empty($_POST['expansions_available'])) {
-        echo 'A Number is required';
+        echo '<h2>Form not Submitted!!! Expansion is required</h2><br>';
     } else {
         $expansion = $_POST['expansions_available'];
         if (preg_match('/[^0-9\s]+$/', $expansion)) {
-            echo 'Must be a number';
+            echo '<h2>Form not Submitted!!! Expansion must be a number</h2><br>';
         }
     }
     if(empty($_POST['max_number_of_players'])) {
-        echo 'A Number is required';
+        echo '<h2>Form not Submitted!!! Max players is required</h2><br>';
     } else {
         $maxPlayers = $_POST['max_number_of_players'];
         if (preg_match('/[^0-9\s]+$/', $maxPlayers)) {
-            echo 'Must be a number';
+            echo '<h2>Form not Submitted!!! Max Players must be a number</h2><br>';
         }
     }
     if(empty($_POST['min_number_of_players'])) {
-        echo 'A Number is required';
+        echo '<h2>Form not Submitted!!! Min Players is required</h2><br>';
     } else {
         $minPlayers = $_POST['min_number_of_players'];
         if (preg_match('/[^0-9\s]+$/', $minPlayers)) {
-            echo 'Must be a number';
+            echo '<h2>Form not Submitted!!! Min players must be a number</h2><br>';
         }
     }
     $otherQuery = $db->prepare(

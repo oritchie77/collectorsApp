@@ -107,7 +107,7 @@ main h2 {
 
 .gameCollection .gameCardsContainer .gameCardBorder:hover {
     background-color: var(--my-light-blue);
-    transform: scale(1.8);
+    transform: scale(1.4);
     z-index: 1;
 }
 
